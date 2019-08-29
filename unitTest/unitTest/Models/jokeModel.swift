@@ -21,5 +21,4 @@ struct JokeWrapper: Codable{
             fatalError("could not decode info\(decodeError)")
         }
     }
-   
 }

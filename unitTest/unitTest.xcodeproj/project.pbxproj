@@ -9,14 +9,17 @@
 /* Begin PBXBuildFile section */
 		5085F0AF2318526100455AB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5085F0AE2318526100455AB0 /* AppDelegate.swift */; };
 		5085F0B12318526100455AB0 /* JokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5085F0B02318526100455AB0 /* JokeViewController.swift */; };
-		5085F0B32318526100455AB0 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5085F0B22318526100455AB0 /* SecondViewController.swift */; };
+		5085F0B32318526100455AB0 /* StarWarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5085F0B22318526100455AB0 /* StarWarsViewController.swift */; };
 		5085F0B62318526100455AB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5085F0B42318526100455AB0 /* Main.storyboard */; };
 		5085F0B82318526200455AB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5085F0B72318526200455AB0 /* Assets.xcassets */; };
 		5085F0BB2318526200455AB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5085F0B92318526200455AB0 /* LaunchScreen.storyboard */; };
-		5085F0C62318526200455AB0 /* unitTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5085F0C52318526200455AB0 /* unitTestTests.swift */; };
 		5085F0D22318533C00455AB0 /* joke.json in Resources */ = {isa = PBXBuildFile; fileRef = 5085F0D12318533C00455AB0 /* joke.json */; };
 		5085F0D6231853BA00455AB0 /* jokeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5085F0D5231853BA00455AB0 /* jokeModel.swift */; };
 		5085F0DA231860F800455AB0 /* JokeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5085F0D9231860F800455AB0 /* JokeDetailViewController.swift */; };
+		5085F0DC231866F700455AB0 /* starWars.json in Resources */ = {isa = PBXBuildFile; fileRef = 5085F0DB231866F700455AB0 /* starWars.json */; };
+		5085F0E0231870A100455AB0 /* unitTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5085F0C52318526200455AB0 /* unitTestTests.swift */; };
+		5085F0E1231870AF00455AB0 /* starWarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5085F0DD2318671B00455AB0 /* starWarsModel.swift */; };
+		5085F0E52318768B00455AB0 /* starWarsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5085F0E42318768B00455AB0 /* starWarsDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +36,7 @@
 		5085F0AB2318526100455AB0 /* unitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = unitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5085F0AE2318526100455AB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5085F0B02318526100455AB0 /* JokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewController.swift; sourceTree = "<group>"; };
-		5085F0B22318526100455AB0 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		5085F0B22318526100455AB0 /* StarWarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsViewController.swift; sourceTree = "<group>"; };
 		5085F0B52318526100455AB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5085F0B72318526200455AB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5085F0BA2318526200455AB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,6 +47,9 @@
 		5085F0D12318533C00455AB0 /* joke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = joke.json; sourceTree = "<group>"; };
 		5085F0D5231853BA00455AB0 /* jokeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jokeModel.swift; sourceTree = "<group>"; };
 		5085F0D9231860F800455AB0 /* JokeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeDetailViewController.swift; sourceTree = "<group>"; };
+		5085F0DB231866F700455AB0 /* starWars.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = starWars.json; sourceTree = "<group>"; };
+		5085F0DD2318671B00455AB0 /* starWarsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = starWarsModel.swift; sourceTree = "<group>"; };
+		5085F0E42318768B00455AB0 /* starWarsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = starWarsDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				5085F0B02318526100455AB0 /* JokeViewController.swift */,
-				5085F0B22318526100455AB0 /* SecondViewController.swift */,
+				5085F0B22318526100455AB0 /* StarWarsViewController.swift */,
 			);
 			path = IntroViewControllers;
 			sourceTree = "<group>";
@@ -118,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				5085F0D12318533C00455AB0 /* joke.json */,
+				5085F0DB231866F700455AB0 /* starWars.json */,
 			);
 			path = JsonData;
 			sourceTree = "<group>";
@@ -126,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				5085F0D5231853BA00455AB0 /* jokeModel.swift */,
+				5085F0DD2318671B00455AB0 /* starWarsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -144,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				5085F0D9231860F800455AB0 /* JokeDetailViewController.swift */,
+				5085F0E42318768B00455AB0 /* starWarsDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -230,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5085F0BB2318526200455AB0 /* LaunchScreen.storyboard in Resources */,
+				5085F0DC231866F700455AB0 /* starWars.json in Resources */,
 				5085F0B82318526200455AB0 /* Assets.xcassets in Resources */,
 				5085F0D22318533C00455AB0 /* joke.json in Resources */,
 				5085F0B62318526100455AB0 /* Main.storyboard in Resources */,
@@ -250,9 +260,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5085F0E1231870AF00455AB0 /* starWarsModel.swift in Sources */,
 				5085F0D6231853BA00455AB0 /* jokeModel.swift in Sources */,
+				5085F0E52318768B00455AB0 /* starWarsDetailViewController.swift in Sources */,
 				5085F0DA231860F800455AB0 /* JokeDetailViewController.swift in Sources */,
-				5085F0B32318526100455AB0 /* SecondViewController.swift in Sources */,
+				5085F0B32318526100455AB0 /* StarWarsViewController.swift in Sources */,
 				5085F0AF2318526100455AB0 /* AppDelegate.swift in Sources */,
 				5085F0B12318526100455AB0 /* JokeViewController.swift in Sources */,
 			);
@@ -262,7 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5085F0C62318526200455AB0 /* unitTestTests.swift in Sources */,
+				5085F0E0231870A100455AB0 /* unitTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
