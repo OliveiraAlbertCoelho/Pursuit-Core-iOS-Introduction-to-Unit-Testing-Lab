@@ -1,0 +1,121 @@
+{
+    "response_code": 0,
+    "results": [
+        {
+            "category": "Entertainment%3A%20Comics",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "Who%20is%20Batman%3F",
+            "correct_answer": "Bruce%20Wayne",
+            "incorrect_answers": [
+                "Clark%20Kent",
+                "Barry%20Allen",
+                "Tony%20Stark"
+            ]
+        },
+        {
+            "category": "Sports",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "Who%20was%20the%20British%20professional%20wrestler%20Shirley%20Crabtree%20better%20known%20as%3F",
+            "correct_answer": "Big%20Daddy",
+            "incorrect_answers": [
+                "Giant%20Haystacks",
+                "Kendo%20Nagasaki",
+                "Masambula"
+            ]
+        },
+        {
+            "category": "Geography",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "How%20many%20federal%20states%20does%20Germany%20have%3F",
+            "correct_answer": "16",
+            "incorrect_answers": [
+                "13",
+                "32",
+                "25"
+            ]
+        },
+        {
+            "category": "Sports",
+            "type": "boolean",
+            "difficulty": "easy",
+            "question": "Peyton%20Manning%20retired%20after%20winning%20Super%20Bowl%20XLIX.",
+            "correct_answer": "False",
+            "incorrect_answers": [
+                "True"
+            ]
+        },
+        {
+            "category": "Vehicles",
+            "type": "boolean",
+            "difficulty": "medium",
+            "question": "Ferrari%20has%20never%20made%20a%20V10%20engine%20for%20any%20of%20its%20cars.",
+            "correct_answer": "False",
+            "incorrect_answers": [
+                "True"
+            ]
+        },
+        {
+            "category": "Entertainment%3A%20Video%20Games",
+            "type": "multiple",
+            "difficulty": "hard",
+            "question": "In%20%22Halo%22%2C%20what%20is%20the%20name%20of%20the%20planet%20which%20Installation%2004%20orbits%3F",
+            "correct_answer": "Threshold",
+            "incorrect_answers": [
+                "Substance",
+                "Sanghelios",
+                "Te"
+            ]
+        },
+        {
+            "category": "Entertainment%3A%20Video%20Games",
+            "type": "multiple",
+            "difficulty": "hard",
+            "question": "How%20many%20aces%20can%20be%20shot%20down%20through%20the%20entirety%20of%20%22Ace%20Combat%20Zero%3A%20The%20Belkan%20War%22%3F",
+            "correct_answer": "169",
+            "incorrect_answers": [
+                "100",
+                "132",
+                "245"
+            ]
+        },
+        {
+            "category": "Entertainment%3A%20Video%20Games",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "In%20%22Call%20Of%20Duty%3A%20Zombies%22%2C%20what%20is%20the%20name%20of%20the%20Pack-A-Punched%20Crossbow%3F",
+            "correct_answer": "Awful%20Lawton",
+            "incorrect_answers": [
+                "Longinus",
+                "V-R11",
+                "Predator"
+            ]
+        },
+        {
+            "category": "Entertainment%3A%20Film",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "Who%20directed%20the%20movie%20%22Alien%22%3F",
+            "correct_answer": "Ridley%20Scott",
+            "incorrect_answers": [
+                "Christopher%20Nolan",
+                "Michael%20Bay",
+                "James%20Cameron"
+            ]
+        },
+        {
+            "category": "Entertainment%3A%20Music",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "Where%20did%20the%20British%20Boy%20Band%20%22Bros%22%20come%20from%3F",
+            "correct_answer": "Camberley",
+            "incorrect_answers": [
+                "Guildford",
+                "Aldershot",
+                "Bagshot"
+            ]
+        }
+    ]
+}

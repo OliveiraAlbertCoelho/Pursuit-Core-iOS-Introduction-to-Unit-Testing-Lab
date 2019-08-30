@@ -70,4 +70,24 @@ class unitTestTests: XCTestCase {
              XCTAssertTrue(star.results[i].title == star.results[i].title.description, " \(star.results[i].title) is not a String")
         }
     }
+    
+    func testLoadTrivia() {
+        let data = getDataFromJSon(name: "trivia")
+        let trivia = triviaWrapper.getTrivia(fron: data)
+        XCTAssertTrue(trivia.self != nil, "There was no Object")
+    }
+    func testTriviaArrayCount() {
+        let data = getDataFromJSon(name: "trivia")
+             let trivia = triviaWrapper.getTrivia(fron: data)
+        XCTAssertTrue(trivia.count == 10, "There aren't 10 items, it has \(trivia.count)")
+    }
+    func testThatStringTrivia(){
+        let data = getDataFromJSon(name: "trivia")
+         let trivia = triviaWrapper.getTrivia(fron: data)
+        for i in 0..<trivia.count{
+            XCTAssertTrue(trivia[i].category == trivia[i].category.description, " \(trivia[i].category) is not a String")
+           XCTAssertTrue(trivia[i].correct_answer == trivia[i].correct_answer.description, " \(trivia[i].correct_answer) is not a String")
+             XCTAssertTrue(trivia[i].type == trivia[i].type.description, " \(trivia[i].type) is not a String")
+        }
+    }
 }

@@ -20,6 +20,11 @@
 		5085F0E0231870A100455AB0 /* unitTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5085F0C52318526200455AB0 /* unitTestTests.swift */; };
 		5085F0E1231870AF00455AB0 /* starWarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5085F0DD2318671B00455AB0 /* starWarsModel.swift */; };
 		5085F0E52318768B00455AB0 /* starWarsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5085F0E42318768B00455AB0 /* starWarsDetailViewController.swift */; };
+		5085F0E723187C0900455AB0 /* TriviaDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5085F0E623187C0900455AB0 /* TriviaDetailViewController.swift */; };
+		5085F0E923187C1C00455AB0 /* triviaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5085F0E823187C1C00455AB0 /* triviaModel.swift */; };
+		5085F0EB23187C2D00455AB0 /* TriviaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5085F0EA23187C2D00455AB0 /* TriviaViewController.swift */; };
+		5085F0EF23187C9100455AB0 /* trivia.json in Resources */ = {isa = PBXBuildFile; fileRef = 5085F0EE23187C9100455AB0 /* trivia.json */; };
+		5085F0F12318861D00455AB0 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5085F0F02318861D00455AB0 /* extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +55,11 @@
 		5085F0DB231866F700455AB0 /* starWars.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = starWars.json; sourceTree = "<group>"; };
 		5085F0DD2318671B00455AB0 /* starWarsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = starWarsModel.swift; sourceTree = "<group>"; };
 		5085F0E42318768B00455AB0 /* starWarsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = starWarsDetailViewController.swift; sourceTree = "<group>"; };
+		5085F0E623187C0900455AB0 /* TriviaDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaDetailViewController.swift; sourceTree = "<group>"; };
+		5085F0E823187C1C00455AB0 /* triviaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = triviaModel.swift; sourceTree = "<group>"; };
+		5085F0EA23187C2D00455AB0 /* TriviaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaViewController.swift; sourceTree = "<group>"; };
+		5085F0EE23187C9100455AB0 /* trivia.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = trivia.json; sourceTree = "<group>"; };
+		5085F0F02318861D00455AB0 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +126,7 @@
 			children = (
 				5085F0B02318526100455AB0 /* JokeViewController.swift */,
 				5085F0B22318526100455AB0 /* StarWarsViewController.swift */,
+				5085F0EA23187C2D00455AB0 /* TriviaViewController.swift */,
 			);
 			path = IntroViewControllers;
 			sourceTree = "<group>";
@@ -125,6 +136,7 @@
 			children = (
 				5085F0D12318533C00455AB0 /* joke.json */,
 				5085F0DB231866F700455AB0 /* starWars.json */,
+				5085F0EE23187C9100455AB0 /* trivia.json */,
 			);
 			path = JsonData;
 			sourceTree = "<group>";
@@ -134,6 +146,8 @@
 			children = (
 				5085F0D5231853BA00455AB0 /* jokeModel.swift */,
 				5085F0DD2318671B00455AB0 /* starWarsModel.swift */,
+				5085F0E823187C1C00455AB0 /* triviaModel.swift */,
+				5085F0F02318861D00455AB0 /* extension.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -153,6 +167,7 @@
 			children = (
 				5085F0D9231860F800455AB0 /* JokeDetailViewController.swift */,
 				5085F0E42318768B00455AB0 /* starWarsDetailViewController.swift */,
+				5085F0E623187C0900455AB0 /* TriviaDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -240,6 +255,7 @@
 			files = (
 				5085F0BB2318526200455AB0 /* LaunchScreen.storyboard in Resources */,
 				5085F0DC231866F700455AB0 /* starWars.json in Resources */,
+				5085F0EF23187C9100455AB0 /* trivia.json in Resources */,
 				5085F0B82318526200455AB0 /* Assets.xcassets in Resources */,
 				5085F0D22318533C00455AB0 /* joke.json in Resources */,
 				5085F0B62318526100455AB0 /* Main.storyboard in Resources */,
@@ -260,13 +276,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5085F0E723187C0900455AB0 /* TriviaDetailViewController.swift in Sources */,
 				5085F0E1231870AF00455AB0 /* starWarsModel.swift in Sources */,
 				5085F0D6231853BA00455AB0 /* jokeModel.swift in Sources */,
 				5085F0E52318768B00455AB0 /* starWarsDetailViewController.swift in Sources */,
 				5085F0DA231860F800455AB0 /* JokeDetailViewController.swift in Sources */,
+				5085F0EB23187C2D00455AB0 /* TriviaViewController.swift in Sources */,
 				5085F0B32318526100455AB0 /* StarWarsViewController.swift in Sources */,
+				5085F0F12318861D00455AB0 /* extension.swift in Sources */,
 				5085F0AF2318526100455AB0 /* AppDelegate.swift in Sources */,
 				5085F0B12318526100455AB0 /* JokeViewController.swift in Sources */,
+				5085F0E923187C1C00455AB0 /* triviaModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

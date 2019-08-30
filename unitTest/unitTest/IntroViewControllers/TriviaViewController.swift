@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  TriviaViewController.swift
 //  unitTest
 //
 //  Created by albert coelho oliveira on 8/29/19.
@@ -8,49 +8,48 @@
 
 import UIKit
 
-class StarWarsViewController: UIViewController {
-    var starWarMovie = [Movie](){
-        didSet{
-    tableCell.reloadData()
-        }}
-    @IBOutlet weak var tableCell: UITableView!
+class TriviaViewController: UIViewController {
+    var triviaUser = [trivia]()
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableCell.delegate = self
-        tableCell.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
         loadData()
     }
     private func loadData() {
-        guard let pathToJSONFile = Bundle.main.path(forResource: "starWars", ofType: "json") else {
+        guard let pathToJSONFile = Bundle.main.path(forResource: "trivia", ofType: "json") else {
             fatalError("coundn't find json file")}
         let url = URL(fileURLWithPath: pathToJSONFile)
         do {
             let data = try
                 Data(contentsOf: url)
-            let starJson = try starWrapper.getStarWars(fron: data)
-            starWarMovie = starJson.results
+            let triviaJson = try triviaWrapper.getTrivia(fron: data)
+            triviaUser = triviaJson.results
         }
         catch {
             print(error)
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let starWarDetailVc = segue.destination as? starWarsDetailViewController else {
+        guard let triviaDetail = segue.destination as? TriviaDetailViewController else {
             fatalError("Unexpected segue")
         }
-        guard let selectedIndexPath = tableCell.indexPathForSelectedRow
+        guard let selectedIndexPath = tableView.indexPathForSelectedRow
             else { fatalError("No row selected") }
-        starWarDetailVc.movie = starWarMovie[selectedIndexPath.row]
+        triviaDetail.selecTriv = triviaUser[selectedIndexPath.row]
     }
 }
-extension StarWarsViewController: UITableViewDelegate, UITableViewDataSource{
+extension TriviaViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return starWarMovie.count
+        return triviaUser.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableCell.dequeueReusableCell(withIdentifier: "starWar")
-        cell?.textLabel?.text = starWarMovie[indexPath.row].title
+        let cell = tableView.dequeueReusableCell(withIdentifier: "triviaTable")
+        cell?.textLabel?.text = triviaUser[indexPath.row].question.noPercentEncoding()
+        cell?.detailTextLabel?.text = triviaUser[indexPath.row].category.noPercentEncoding()
         return cell!
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
