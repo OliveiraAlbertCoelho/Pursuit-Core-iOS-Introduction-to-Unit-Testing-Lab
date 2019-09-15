@@ -9,8 +9,13 @@
 import UIKit
 
 class TriviaViewController: UIViewController {
-    var triviaUser = [trivia]()
+    var triviaUser = [trivia](){
+        didSet{
+            tableView.reloadData()
+        }
+    }
     @IBOutlet weak var tableView: UITableView!
+    var array = [Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +23,7 @@ class TriviaViewController: UIViewController {
         tableView.dataSource = self
         loadData()
     }
+    
     private func loadData() {
         guard let pathToJSONFile = Bundle.main.path(forResource: "trivia", ofType: "json") else {
             fatalError("coundn't find json file")}
@@ -39,8 +45,10 @@ class TriviaViewController: UIViewController {
         guard let selectedIndexPath = tableView.indexPathForSelectedRow
             else { fatalError("No row selected") }
         triviaDetail.selecTriv = triviaUser[selectedIndexPath.row]
+        triviaUser.remove(at: selectedIndexPath.row)
     }
 }
+
 extension TriviaViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return triviaUser.count
@@ -50,7 +58,7 @@ extension TriviaViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "triviaTable")
         cell?.textLabel?.text = triviaUser[indexPath.row].question.noPercentEncoding()
         cell?.detailTextLabel?.text = triviaUser[indexPath.row].category.noPercentEncoding()
-        return cell!
+          return cell!
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140

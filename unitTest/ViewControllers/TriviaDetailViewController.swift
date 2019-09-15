@@ -12,45 +12,50 @@ class TriviaDetailViewController: UIViewController {
     var selecTriv: trivia!
     @IBOutlet weak var question: UILabel!
     @IBOutlet var buttonOutlet: [UIButton]!
-
-        @IBAction func buttonAction(_ sender: UIButton) {
-
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        hideALl()
-        checkType()
-    }
-    func checkType(){
-        if selecTriv.type == "multiple"{
-                loadUpTwoQuestions()
-        }else {
-             loadUpFourQuestions()
+    @IBOutlet weak var correctAnsw: UILabel!
+    
+    
+    var array = [String]()
+    @IBAction func buttonAction(_ sender: UIButton) {
+        if let title = sender.titleLabel?.text{
+            print(selecTriv.correct_answer)
+            if title == selecTriv.correct_answer.removingPercentEncoding{
+                self.view.backgroundColor = .green
+            } else {
+                self.view.backgroundColor = .red
+                correctAnsw.isHidden = false
+                correctAnsw.text = "Correct answer: \(selecTriv.correct_answer.removingPercentEncoding!)"
+            }
         }
-    }
-    func hideALl() {
-        for i in buttonOutlet{
-            i.isHidden = true
-        }
-    }
-    func showAll (){
-        for i in buttonOutlet{
-    i.isHidden = false
-        }
+        disableAll()
     }
     
-    func loadUpFourQuestions(){
-     buttonOutlet[0].titleLabel?.text = selecTriv.correct_answer
-     buttonOutlet[1].titleLabel?.text = selecTriv.incorrect_answers[0]
-     buttonOutlet[2].titleLabel?.text = selecTriv.incorrect_answers[1]
-     buttonOutlet[3].titleLabel?.text = selecTriv.incorrect_answers[2]
-     showAll ()
+    
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        makeArray()
+        setUpButtons()
+    }
+    func makeArray() {
+        for (_,v) in selecTriv.incorrect_answers.enumerated(){
+            array.append(v)
         }
-    func loadUpTwoQuestions() {
-        buttonOutlet[0].titleLabel?.text = selecTriv.correct_answer
-        buttonOutlet[1].titleLabel?.text = selecTriv.incorrect_answers[0]
-        buttonOutlet[0].isHidden = false
-         buttonOutlet[1].isHidden = false
+        print(array)
+        array.append(selecTriv.correct_answer)
     }
+    func setUpButtons(){
+        question.text = selecTriv.question.removingPercentEncoding
+        for (k,v) in array.enumerated(){
+            buttonOutlet[k].isHidden = false
+            buttonOutlet[k].setTitle(v.removingPercentEncoding, for: .normal)
+        }
     }
+    func disableAll(){
+        for (_,v) in buttonOutlet.enumerated(){
+            v.isEnabled = false
+        }
+    }
+}
 
